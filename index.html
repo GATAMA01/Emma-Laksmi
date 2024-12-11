@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Peta:wght@100..900&display=swap"
+        rel="stylesheet" />
+    <title>Emma Laksmi</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h4>Emma Laksmi</h4>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <span>Hai Sayang</span><br />
+            <span>Selamat Ulang Tahun</span>
+            <div class="btn-galery">
+                <button><a href="#image-content">Galery</a></button>
+            </div>
+        </section>
+        <div class="video">
+            <iframe width="90%" height="240" src="https://www.youtube.com/embed/YZ84iQrbYjw?si=fGix4jp3idzbkncs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>Selamat Menonton</p>
+        </div>
+        <div class="galery" id="image-content">
+            <div class="title-img">
+            <h2>Galery</h2>
+            </div>
+            <div class="img-section">
+                <img src="image-1.jpg" alt="">
+                <img src="image-2.jpg" alt="">
+                <img src="image-3.jpg" alt="">
+                <img src="image-4.jpg" alt="">
+                <img src="image-5.jpg" alt="">
+                <img src="image-7.jpg" alt="">
+                <img src="IMG-20241120-WA0001.jpg" alt="">
+                <img src="IMG-20241211-WA0004.jpg" alt="">
+                <img src="IMG-20241211-WA0005.jpg" alt="">
+                <img src="IMG-20241211-WA0006.jpg" alt="">
+                <img src="IMG-20241211-WA0007.jpg" alt="">
+                <img src="IMG-20241211-WA0008.jpg" alt="">
+                <img src="IMG-20241211-WA0009.jpg" alt="" class="last-img">
+            </div>
+            <h2>Video</h2>
+            <div class="video-section">
+                <video  controls src="WhatsApp Video 2024-12-09 at 21.07.29_0f0a4cd5.mp4" type="video/mp4"></video>
+                <video  controls src="WhatsApp Video 2024-12-09 at 21.07.25_91ffcaff.mp4" type="video/mp4"></video>
+                <video  controls src="WhatsApp Video 2024-12-09 at 21.07.23_01b89082.mp4" type="video/mp4"></video>
+                <video  controls src="VID-20241211-WA0005.mp4" type="video/mp4"></video>
+                <video  controls src="VID-20241211-WA0003.mp4" type="video/mp4"></video>
+                <video  controls src="VID-20241211-WA0004.mp4" type="video/mp4"></video>
+                <video  controls src="VID-20241211-WA0002.mp4" type="video/mp4"></video>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <audio id="myAudio" autoplay loop>
+            <source src="WhatsApp Audio 2024-12-11 at 18.16.35_4c2c9107.mp3" type="audio/mp3">
+          </audio>
+          
+          <div id="audioControl" onclick="toggleAudio()">
+            <img id="speakerIcon" src="volume_up_31dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="Speaker Icon" />
+          </div>
+          
+    </footer>
+    <script>
+         function toggleAudio() {
+  const audio = document.getElementById('myAudio');
+  const speakerIcon = document.getElementById('speakerIcon');
+  
+  if (audio.paused) {
+    audio.play();
+    speakerIcon.src = 'volume_up_31dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png'; // Gambar speaker aktif
+  } else {
+    audio.pause();
+    speakerIcon.src = 'volume_off_31dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png'; // Gambar speaker nonaktif
+  }
+}
+
+
+        const slides = document.querySelector('.slides');
+        const videos = document.querySelectorAll('.slides video');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+    
+        let index = 0;
+    
+        const showSlide = () => {
+          const width = slides.clientWidth;
+          slides.style.transform = `translateX(${-index * width}px)`;
+          videos.forEach((video, idx) => {
+            if (idx !== index) video.pause(); // Pause video saat berpindah slide
+          });
+        };
+    
+        nextBtn.addEventListener('click', () => {
+          index = (index + 1) % videos.length; // Loop ke awal setelah slide terakhir
+          showSlide();
+        });
+    
+        prevBtn.addEventListener('click', () => {
+          index = (index - 1 + videos.length) % videos.length; // Loop ke akhir jika mundur dari awal
+          showSlide();
+        });
+      </script>
+</body>
+
+</html>

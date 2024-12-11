@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: "Lexend Peta";
+    font-optical-sizing: auto;
+    
+}
+nav{
+    display: block;
+    width: 100%;
+    background-color: white;
+    position:fixed;
+    align-content: center;
+    text-align: center;
+    height:3rem;
+    border-bottom: 1px solid black;
+}
+h4{
+    color: #000000;
+    font-size: 15px;
+}
+section{
+    display: block;
+    border: 1px solid black ;
+    align-content: center;
+    padding: 1rem;
+    height: 24rem;
+}
+.btn-galery button{
+    display: block;
+    margin-top: 1rem;
+    width: 4.5rem;
+    height: 1.8rem;
+    border: none;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.719);
+}
+.btn-galery a{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 9px;
+    font-family: "Lexend Peta";
+}
+.video{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 25rem;
+    border-bottom: 1px solid black;
+}
+iframe{
+    border: 1px solid black;
+    padding:10px;
+}
+p{
+    text-align: center;
+    padding-top: 2.5rem;
+    font-size: x-small;
+}
+.galery{
+    height: auto;
+}
+.galery h2{
+    padding-top: 3.5rem;
+    text-align:center;
+    margin-left:1rem;
+}
+.img-section{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    justify-content: center;
+    gap: 5px;
+}
+
+.video-section{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    justify-content: center;
+    gap: 10px;
+}
+img{
+    width: 190px;
+    margin:5px;
+    object-fit: cover; /* Memastikan gambar tetap terlihat proporsional */
+    height: auto;
+}
+.last-img{
+    width: 395px;
+}
+video{
+    width:190px;
+    margin:5px;
+    object-fit: cover; 
+    height: auto;
+}
+
+.slider-container {
+    position:absolute;
+    width: 90%;
+    margin-top: 10rem;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  .slides {
+    display: flex;
+    transition: transform 0.9s ease-in-out;
+  }
+
+  .slides video {
+    width: 100%;
+  }
+
+  .nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  .prev-btn {
+    left: 10px;
+  }
+
+  .next-btn {
+    right: 10px;
+  }
+
+  #audioControl {
+    display: flex;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+  
+  #audioControl img {
+    width: 100%;
+    height: auto;
+  }
+  
